@@ -198,6 +198,23 @@ app.get('/api/series', async (req, res) => {
   }
 });
 
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'AsuraScans Manga API',
+    version: '1.0.0',
+    endpoints: [
+      'GET /api/search',
+      'GET /api/latest',
+      'GET /api/popular',
+      'GET /api/manga/:id',
+      'GET /api/chapter/:id',
+      'GET /api/series',
+      'GET /health'
+    ]
+  });
+});
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
@@ -205,7 +222,7 @@ app.get('/health', (req, res) => {
 
 // Handle 404
 app.use((req, res) => {
-  res.status(404).json({ error: 'Not Found' });
+  res.status(404).json({ error: 'Not Found', path: req.path });
 });
 
 // Export the Express app
