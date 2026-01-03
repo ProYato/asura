@@ -1,3 +1,4 @@
+
 # Manga API
 
 A TypeScript-based manga scraping API that supports various manga sources.
@@ -97,5 +98,6 @@ GET /health
 5. Start production server: `npm start`
 
 ## License
+
 
 MIT 
