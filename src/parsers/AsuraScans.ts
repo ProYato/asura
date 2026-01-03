@@ -1,3 +1,4 @@
+
 import { load } from 'cheerio';
 import {
   MangaParser,
@@ -391,3 +392,4 @@ class AsuraScans extends MangaParser {
 }
 
 export default AsuraScans; 
+
