@@ -1,3 +1,4 @@
+
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
 export enum MediaStatus {
@@ -101,4 +102,5 @@ export abstract class MangaParser {
   abstract search(query: string, page?: number): Promise<ISearch<IMangaResult>>;
   abstract fetchMangaInfo(mangaId: string): Promise<IMangaInfo>;
   abstract fetchChapterPages(chapterId: string): Promise<IMangaChapterPage[]>;
+
 } 
